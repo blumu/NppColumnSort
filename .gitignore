@@ -13,6 +13,9 @@
 *.dylib
 *.dll
 
+# Symbol files
+*.pdb
+
 # Fortran module files
 *.mod
 
@@ -26,3 +29,4 @@
 *.exe
 *.out
 *.app
+
