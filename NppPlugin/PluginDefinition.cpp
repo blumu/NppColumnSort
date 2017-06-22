@@ -77,7 +77,7 @@ std::vector<ColumnCriteria> criterias;
 //
 // Initialize your plugin data here
 // It will be called while plugin loading   
-void pluginInit(HANDLE hModule)
+void pluginInit(HANDLE /*hModule*/)
 {
 }
 
@@ -377,14 +377,14 @@ void SortCommand()
 {
     int m_iLineLength = 0, m_iStartPos = 0, m_iEndPos = 0, m_iEOL, m_iFirstLine = 0, m_iLastLine = 0;
     int m_iLineCount = 0;
-    int currentEdit;
+    int currentEdit = 0;
     vector<string> strLines;
     string strLine;
-    static const basic_string <char>::size_type npos = -1;
+    static const basic_string <char>::size_type npos = (size_t)-1;
     char *szLine, szEOL[3];
 
     HWND hCurrentEditView = nppData._scintillaMainHandle;
-    ::SendMessage(nppData._nppHandle, WM_GETCURRENTSCINTILLA, 0, (LPARAM)&currentEdit);
+    ::SendMessage(nppData._nppHandle, NPPM_GETCURRENTSCINTILLA, 0, (LPARAM)&currentEdit);
     if (currentEdit)
         hCurrentEditView = nppData._scintillaSecondHandle;
 
@@ -659,7 +659,7 @@ void UpdateItemFromEditFields(HWND hDlg, HWND hList, int iItem)
 }
 
 
-BOOL CALLBACK ColumnsDialogProc(
+INT_PTR CALLBACK ColumnsDialogProc(
   HWND hwndDlg, 
   UINT uMsg, 
   WPARAM wParam, 

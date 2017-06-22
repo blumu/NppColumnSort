@@ -30,3 +30,12 @@
 *.out
 *.app
 
+
+*.sdf
+*.sln
+*.suo
+*.opensdf
+*.exp
+*.vcxproj.user
+*.aps
+*.zip

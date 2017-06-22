@@ -23,13 +23,6 @@
 //
 #include "PluginInterface.h"
 
-#define NOTEPADPLUS_USER   (WM_USER + 1000)
-#define	RUNCOMMAND_USER    (WM_USER + 3000)
-
-#define WM_GETCURRENTSCINTILLA  (NOTEPADPLUS_USER + 4)
-#define WM_GETCURRENTLANGTYPE  (NOTEPADPLUS_USER + 5)
-
-
 //-------------------------------------//
 //-- STEP 1. DEFINE YOUR PLUGIN NAME --//
 //-------------------------------------//
@@ -77,7 +70,7 @@ bool setCommand(size_t index, TCHAR *cmdName, PFUNCPLUGINCMD pFunc, ShortcutKey 
 //
 // Your plugin command functions
 //
-BOOL CALLBACK ColumnsDialogProc(
+INT_PTR CALLBACK ColumnsDialogProc(
   HWND hwndDlg, 
   UINT uMsg, 
   WPARAM wParam, 
