@@ -10,6 +10,11 @@ The plugin lets you define a sort criterion based on an unlimited number of colu
 
 More information at:  http://william.famille-blum.org/blog/index.php?entry=entry110123-113226
 
+Build status
+------------
+
+[![Build status](https://ci.appveyor.com/api/projects/status/ksp8pd28oqhi298p?svg=true)](https://ci.appveyor.com/project/blumu/nppcolumnsort)
+
 Installation
 --------------
 
