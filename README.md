@@ -8,7 +8,7 @@ Implements TextPad-like text sorting feature for Notepad++.
 
 The plugin lets you define a sort criterion based on an unlimited number of columns. For each column the comparison can be either numerical or lexicographical.
 
-More information at:  http://william.famille-blum.org/blog/index.php?entry=entry110123-113226
+More information at:https://william.famille-blum.org/blog/entry110123-113226/
 
 Installation
 --------------
